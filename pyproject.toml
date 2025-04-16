@@ -1,0 +1,39 @@
+[project]
+name = "mcp-server-filespy"
+version = "0.6.2"
+description = "A Model Context Protocol server providing tools to fetch and convert web content for usage by LLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Anthropic, PBC." }]
+maintainers = [{ name = "Jack Adamson", email = "jadamson@anthropic.com" }]
+keywords = ["http", "mcp", "llm", "automation"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "mcp-server-baidu-maps",
+    "mcp-server-fetch",
+    "mcp-server-sentry",
+    "mcp-server-sqlite",
+    "mcp-server-time"
+]
+
+[tool.uv.sources]
+mcp-server-baidu-maps = { workspace = true }
+mcp-server-fetch = { workspace = true }
+mcp-server-sentry = { workspace = true }
+mcp-server-sqlite = { workspace = true }
+mcp-server-time = { workspace = true }
+
+
+[tool.uv.workspace]
+members = ["src/baidu_maps/", "src/fetch/", "src/sentry/", "src/sqlite/", "src/time/"]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
