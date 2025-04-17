@@ -54,13 +54,6 @@ uv run --with mcp\[cli\] mcp run {YOUR_PATH}/mcp_server_baidu_maps/map.py
 
 打开 `Cursor`配置，在MCP中添加MCP Server
 
-高德地图123
-
-| Api Key                          |
-| -------------------------------- |
-| 02627cf5785c7b4533722beb8c9460a8 |
-| Yg5RBcj3eKNwQI78zAKnWSPSCXnCIjd5 |
-
 在文件中添加如下内容后保存
 
 ```json
@@ -77,7 +70,7 @@ uv run --with mcp\[cli\] mcp run {YOUR_PATH}/mcp_server_baidu_maps/map.py
         "{YOUR_PATH}/mcp_server_baidu_maps/map.py"
       ],
       "env": {
-        "BAIDU_MAPS_API_KEY": "Yg5RBcj3eKNwQI78zAKnWSPSCXnCIjd5"
+        "BAIDU_MAPS_API_KEY": "your ak"
 
       }
     }
