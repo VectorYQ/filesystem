@@ -1,6 +1,6 @@
 #!/usr/bin/env uv run --script
 # /// script
-# requires-python = ">=3.12"
+# requires-python = ">=3.11.2"
 # dependencies = [
 #     "click>=8.1.8",
 #     "tomlkit>=0.13.2"
