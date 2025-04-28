@@ -18,7 +18,7 @@ jobs:
 
       - name: Find Python packages
         id: find-packages
-        working-directory: src
+        working-directory: ./
         run: |
           PACKAGES=$(find . -name pyproject.toml -exec dirname {} \; | sed 's/^\.\///' | jq -R -s -c 'split("\n")[:-1]')
           echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
