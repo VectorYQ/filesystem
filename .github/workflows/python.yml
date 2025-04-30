@@ -44,7 +44,10 @@ jobs:
       - name: Install dependencies
         working-directory: ./
         run: uv sync --frozen --all-extras --dev
-
+        
+      - name: Install pyright
+        run: npm install -g pyright
+        
       - name: Run pyright
         working-directory: ./
         run: uv run --frozen pyright
