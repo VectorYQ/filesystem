@@ -43,8 +43,10 @@ jobs:
 
       - name: Install dependencies
         working-directory: ./
-        run: uv sync --frozen --all-extras --dev
-        
+        run: |
+          uv sync --frozen --all-extras --dev
+          pip install tomlkit pytest gitpython
+
       - name: Install pyright
         run: npm install -g pyright
 
